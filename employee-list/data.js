@@ -1,10 +1,6 @@
-let employees = [
-    { id: 1, name: "John Doe", position: "Software Engineer" },
-    { id: 2, name: "Jane Smith", position: "Project Manager" },
-    { id: 3, name: "Emily Johnson", position: "UX Designer" }
-];
+let employees = [];
 
-function addEmployee(name, position) {
+function addEmployee(employees,name, position) {
     let newEmployee = {
         id: Math.floor(Math.random() * 1000 + 1), // random id between 1 and 1000
         name: name,
