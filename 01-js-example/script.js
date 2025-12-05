@@ -1,6 +1,7 @@
 console.log("Hello worrd");
 
 let btn = document.querySelector("#changeBtn");
+
 btn.addEventListener("click", function () {
     // strig is an object
     // object has data and functions
