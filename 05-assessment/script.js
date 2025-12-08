@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function renderEmployeeList(employees) {
     let tableBody = document.querySelector('#employeeTableBody');
+
     tableBody.innerHTML = '';
 
     let newRow = document.createElement('tr');
@@ -21,6 +22,8 @@ function renderEmployeeList(employees) {
               <button class="btn btn-sm btn-danger delete-btn">Delete</button>
            </td>
        `;
-       tableBody.appendChild(newRow);
+
+        tableBody.appendChild(newRow);
+
     }
 };

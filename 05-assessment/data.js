@@ -19,5 +19,13 @@ let employees = [
         gender: "Male",
         position: "Sales Executive",
         salary: 60000
+    },
+    {
+    id: 4,
+    name: "Diana Prince",
+    gender: "Female",
+    position: "Product Manager",
+    salary: 95000                   
+
     }
 ];
