@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let employee of employees) {
             const listItem = document.createElement("li");
             //   listItem.className = "list-group-item d-flex justify-content-between align-items-center";
-            listItem.innerHTML = `${employee.id} <span class="badge bg-primary"> ${employee.name} 
+            listItem.innerHTML = listItem.innerHTML
+                + `${employee.id} <span class="badge bg-primary"> ${employee.name} 
             <span class="badge bg-primary"> ${employee.position}`;
             employeeList.appendChild(listItem);
         }
