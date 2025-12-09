@@ -4,13 +4,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function renderEmployeeList(employees) {
     let tableBody = document.querySelector('#employeeTableBody');
-
     tableBody.innerHTML = '';
-
-    let newRow = document.createElement('tr');
 
     for (let employee of employees) {
 
+        let newRow = document.createElement('tr');
         newRow.innerHTML = `
            <td> ${employee.id}</td>
            <td> ${employee.name}</td>

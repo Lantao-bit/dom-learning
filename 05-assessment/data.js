@@ -21,11 +21,23 @@ let employees = [
         salary: 60000
     },
     {
-    id: 4,
-    name: "Diana Prince",
-    gender: "Female",
-    position: "Product Manager",
-    salary: 95000                   
+        id: 4,
+        name: "Diana Prince",
+        gender: "Female",
+        position: "Product Manager",
+        salary: 95000
 
     }
 ];
+
+function addEmployee(employees, name, gender, position, salary) {
+    if (name.length > 0 && ["Male", "Female", "Unknow"].includes(gender)) {
+        let newEmployee {
+            id: Math.floor(Math.random() * 9999 + 1);
+            
+    } else {
+
+    }
+
+}
+}
