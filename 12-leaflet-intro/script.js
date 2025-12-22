@@ -1,24 +1,19 @@
-// L is the global object fromt he Leaflet javascript
-// L.mp is a method that crates a Leaflet map
-// it takes one parameter -the id of the element 
-// that will contain the map
+document.addEventListener("DOMContentLoaded", async function () {
+    let singapore = [1.29, 103.85]; // #1 Singapore latlng
+    let map = L.map('map').setView(singapore, 13); // #2 Set the center point
 
-// setup the tile layers
-const map = L.map("map");
-const singaporelatLng = [1.2759, 103.8464];
+    // setup the tile layers
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
 
-map.setView(singaporelatLng, 13);
+    let coordinate = [1.2816, 103.8636];
+    let marker = L.marker(coordinate);
+    marker.addTo(map);
 
-//open street map
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+    let response = await axios.get("dengue.geojson");
+    let geojson = response.data;
+    L.geoJSON(geojson).addTo(map);
 
-//add a marker
-const singaporeMarker = L.marker(1.2725, 103.8408);
-singaporeMarker.addTo(map);
-marker.bindpoput("<p>Singapore</p>");
-
-//const zooMarker = L.marker(1.4043,103.79);
-//zooMarker.addTo(map);
+})
